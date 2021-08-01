@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 Canvas</title>
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=fhhzfPUV1eygmnfchGM1VSczNrPwJQuzfB5pCXQtBSqtphbGWs-oEdCm65p-CB0MbGF24-e3wQVFlLDoZ01vP9ME0FgC3RIYEyleq9taDMREoM6FokpJNaavRCT9WCdJGp9YivySR4H2nQRZwnhbYpSHnmyUqq1OpPeLUt2SCFD0-dsKjxCUsCVyElEL4hRdGNxHh2qe6eQOFuC3oD9HwC0lSuk1mrBNsfVdywVJyN5KlryOZ5SNlMKao8H1LijlTpR5Z4tTL4m1fyGTd-ah73h6V4Y5VESGTD5Vjl3oHsMHpWm4Y40zxAFmGAM5VXbvM5OnNG6F_ilH-KOWAFIb3YNPCnQH0D6wOd9EQ3EFrsHuLDHcOlmqyyp8yaKhp74lBZoX0ADoLbxnOgKd-rbobKlP4H0IAoKXCwp9wj8_E03tjQJdvCJnFeq-5VJcQizm7lF5mTc0tbr_WqJJtZv3QoLXu7H-Y_WEhkBYGbN_EwDx3K1UvyAsbHlyq8V4xEG_u-LbzAkmhDuqtTYSbdXguY7Mfbbd3E1P-Zkng_VLoKDVzYpB1LDAzqiQeNO-7uGH0ewJ7xIWbMSk_fdSM6JJaZ_QsdNstiEVj35tBwkrhDz2V2izs_jeaz90ZPyLFQRINzav9xQdV-eh2lx9M62BrDfxgUbGjT6ygSQxgYDEpRF3J1zjbp-yKoJQe0FtHd2AoNmEflspBTNcxCNhOlpGIPmuliHDSSP4drbVum4LwgRjezP5kfOQpJkgZb2etEq0qZkrBhBg9cEcunJIoY3q574NB9jvOFN7kPz48uNQ8tt0X1PbwkhR4fWpGrhLn9Bj" charset="UTF-8"></script></head>
+
+	<body>
+	
+		<canvas id="canvas1" width="400" height="400">
+			Your browser does not support the HTML5 canvas tag.
+		</canvas>
+	
+		<script>
+			//to use the canvas you use javascript and javascript libraries to
+			//manipulate the canvas
+			//some simple lines and shapes
+			
+			//This code is not original.  I have retrieved it from the tutorials
+			//to use for simple demonstration.  All code for the canvas is retrieved
+			//from http://www.html5canvastutorials.com/tutorials/html5-canvas-circles/
+			//and  http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/
+			var canvas = document.getElementById('canvas1');
+		    var context = canvas.getContext('2d');
+		    var centerX = canvas.width / 2;
+            var centerY = canvas.height / 2;
+            var radius = 70;
+		
+		    context.beginPath();
+		    context.rect(188, 50, 200, 100);
+		    context.fillStyle = 'yellow';
+		    context.fill();
+		    context.lineWidth = 7;
+		    context.strokeStyle = 'black';
+		    context.stroke();
+		    
+		    context.beginPath();
+		    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+		    context.fillStyle = 'green';
+		    context.fill();
+		    context.lineWidth = 5;
+		    context.strokeStyle = '#003300';
+		    context.stroke();
+		</script>
+	    <br />
+	    <a href="http://www.html5canvastutorials.com/tutorials/html5-canvas-circles/">
+	    	Some simple tutorials
+	    </a>
+	    <br />
+	    <!-- well beyond the scope of our course -->
+		<a href="http://peterned.home.xs4all.nl/demooo/">
+			3D Spinning Earth
+		</a>
+	</body>
+</html>

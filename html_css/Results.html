@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Input</title>
+		<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=KuGwyoykU8BVUHu9ak6etnR5zgvOQYBK0bO9AEJAxy2hYcnQRVxLPdKfn5KV8WjSGKnd4QsIVhiTQE1gDwokf85d4mhW7z35xCzxuP4PrFbaSc9TLNdOI_LoetZg9oMNJhKapUh-VqK4NdAaGAt2olhViUriahw3Sk1whhdMJDkIL_St6op7vwe4sdgUU6xNURo0I63mgC7TIWepR6ESVfPnMGp2DKN8uOpPHKRDxKFdmoWieAQ3t0rj7LJmemxfRBhLmuNGnZp4OLv-09nLNuFklc8mFJqF7QgaVsM0kRL5QHyBcFzmFkzWvtjK5M2Pu4yBFJLgrdC0wMWI1-bn7pJAo87jGkJ_Dz-u6Q1HzaEqOpurIy_S2_smtvZmvIx8kB086VTRfyIpQaMxv8A_zk9PfJeCpU1tcnUJWfX84TwIhrp10STUHvDYt2jfgs0BwYJDq_5VrItHCcJnutZeBGbKcxJkUgDP4rkwbOONK49Cf-sPuOn4W7jMToWG1Q_Ij40gH6ouGK9e4ZfLANZ_3XeKFHcN0VLcsKnvJC-FAPVTpOV512woFZXbu4HyAexNh8oWv2Hf_E2gz9KxUV8ktLzD2lj9FHIATlhzDK38R9WnDr9yEkkF6q9eghXJKEfA_AHuw8zu_ADFBJYtmEdMw3j1oW4cxSI_jJhiMO0-Z469akQ8SPQsJ0zUQeX1EkhCF_Au0xTHf29BnI0pv4G4cdbAP9BPt2vs-y1VtMU2xvpPZa64HXYf_6bXn-FB72aL8yvV7ao2OEZF0PPS6RZVhnUpNjq-rNRKqdgrD5HQwXI" charset="UTF-8"></script><style>
+			.embolden
+			{
+				font-weight:bold;
+				font-family:Verdana, Geneva, Tahoma, sans-serif;
+				font-size:16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<td>
+					<span>Username:</span>
+				</td>
+				<td>
+					<span id="passedInUsername" style="width:100%;" 
+							class="embolden"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Password:</span>
+				</td>
+				<td>
+					<span id="passedInPassword" style="width:100%;" 
+							class="embolden"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Secret Question:</span>
+				</td>
+				<td>
+					<span id="passedInQuestion" style="width:100%;" 
+							class="embolden"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Colors:</span>
+				</td>
+				<td>
+					<span id="colors" style="width:100%;"
+							class="embolden"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Remember the User?:</span>
+				</td>
+				<td>
+					<span id="rememberMeSelection" style="width:100%;"
+							class="embolden"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Selected State:</span>
+				</td>
+				<td>
+					<span id="selectedStateOption" style="width:100%;" 
+							class="embolden"></span>
+				</td>
+			</tr>
+		</table>
+		
+		<script type="text/javascript">
+		    
+		    
+		    //modified from: 
+		    //http://stackoverflow.com/questions/7269640/html-passing-value-using-query-string
+			function getQSVariableValue(variable) { 
+			  var query = window.location.search.substring(1); 
+			  var vars = query.split("&"); 
+			  
+			  for (var i=0;i<vars.length;i++) { 
+			    var pair = vars[i].split("="); 
+			    if (pair[0] == variable) { 
+			      return pair[1]; 
+			    }
+			  } 
+			} 
+			
+			//get the colors from selected checkboxes
+			function getQSVariableArraySelectedValues(variable) {
+			  var query = window.location.search.substring(1); 
+			  var vars = query.split("&"); 
+			  var retData = new Array();
+			  var j = 0;
+			  for (var i=0;i<vars.length;i++) { 
+			    var pair = vars[i].split("="); 
+			    if (pair[0] == variable) { 
+			    	retData[j] = pair[1];
+			    	j++;
+			    	console.log(pair[1]);
+			    }
+			  } 
+			  return retData;
+			}
+			
+			//modified from:
+			//http://stackoverflow.com/questions/4784568/set-content-of-html-span-with-javascript
+			function removeSpanChildren(spanobj){
+				while(spanobj.firstChild){
+					spanobj.removeChild(spanobj.firstChild);
+				}
+			}
+			
+			function appendSpanText(spanobj, value){
+				spanobj.appendChild(document.createTextNode(value));
+			}
+			
+			
+			//username
+			var un = document.getElementById("passedInUsername");
+			removeSpanChildren(un);
+			appendSpanText(un, getQSVariableValue("userName"));
+			
+			//password
+			var pwd = document.getElementById("passedInPassword");
+			removeSpanChildren(pwd);
+			appendSpanText(pwd, getQSVariableValue("password"));
+						
+			
+			//secretQuestion
+			var cm = document.getElementById("passedInQuestion");
+			removeSpanChildren(cm);
+			appendSpanText(cm, getQSVariableValue("secretQuestion"));
+
+			//checkboxes
+			var selColors = getQSVariableArraySelectedValues("colorselection");
+			var colorselectedstr = "";
+			for (var i = 0; i < selColors.length; i++)
+			{
+			 	colorselectedstr += selColors[i] + ", ";
+			} 			
+			
+			var colors = document.getElementById("colors");
+			removeSpanChildren(colors);
+			appendSpanText(colors, colorselectedstr);
+			
+			//radiobutton
+			var rdoResult = document.getElementById("rememberMeSelection");
+			var rdoValues = getQSVariableArraySelectedValues("rememberMe");
+			if (rdoValues[0] === "Yes")
+			{
+				appendSpanText(rdoResult, "YES -Remember Me is Checked!");
+			}
+			else
+			{
+				appendSpanText(rdoResult, "NO -Remember Me is NOT Checked!");
+			}
+			
+			//selectedoption
+			var selOpt = document.getElementById("selectedStateOption");
+			removeSpanChildren(selOpt);
+			appendSpanText(selOpt, getQSVariableValue("stateSelector"));
+
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Input</title>
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=3Q1abINlQjoSkH_QE_3roCqMPWi48VywdR8rmGapl5HC1Ql2CzJu3R8woaZn-6R31_M97Nf4e_04uslsLQtcUQwcBh9MH3inxPgX3twf43kZ23sMYC6yfUgDyu5fP5DDIE1ZBvv9WwzY5PMaVaNdqn90lukRpuCJnuEsJgdmhYAy0S7gYIc-DyWdNcRwlCgElIXGHKW0RVbWKQ6RUyABY6CEg4EOCXTcu7S0s4WE6_Wz7TCH7YFzYDmFauxTp3iH-Z4ZjSe4JXoUFXkU7Y8OELd5v3XD7WONtslLOjr-JCoasPgdKrwGp17N5FPDXFFrgdYc7Ew3fKlT23VJ3ZKYXEFFHTVkFUCCf68s5RM5rS69RYtv80fTVSoraAV3i8gmnYmvO5jgoTX4UUgVBMhlcZcKiDMFo5ZRdh-Ac7fA90QrGQ5YOF19NEA8EFWbmk244FSdNCqOpov1r0dwgil-oZeyh2pwo9DHYhOJEtnWrCVrQcItNOAt3UpEJn0YivFvqKWVrpKN1va3CyMiMf3N-UWXkkQ4nmdGy0ykL7hWjOwcaSUJfYbTDYH0kd4NJOoxDqGRSgz5ZqdGH8WPJ5r7LBefhOFTD9jU9e3zIWSypjFjKZ86cfZMN9HNb-TW8B43YLU0sQZ5Nw05AX7CVPuJJKLsFZ4mkzTIcGIMHiOi5G4CcU_x2CVZ_agf-Axf4VoM_IGJZBgjI1bHJ_dcBbp1p7S5HZR52Ko8bXOb67TKXIk65knBtTnnsvcIsSbwb8Eb2150MUojMvXvyE-vo3NPzVe3ssNkl9RkLEQcumlrZd6VB15huJTYSOzYcsMie-lB" charset="UTF-8"></script></head>
+
+	<body>
+		<!-- Insert HTML Here -->
+		<form id="loginForm" name="loginForm" method="get" action="Results.html">
+			<table style="width:75%;"> 
+				<tr>
+					<td style="width:35%;">
+						<span>Please enter your username:</span>
+					</td>
+					<td style="width:100%;">
+						<input type="text" name="userName" style="width:100%;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:35%;">
+						<span>Password:</span>
+					</td>
+					<td style="width:100%;">
+						<input type="password" name="password" style="width:100%;"/>				
+					</td>
+				</tr>
+				<tr>
+					<td style="width:35%;">
+						<span>Please enter a secret question:</span>
+					</td>
+					<td style="width:100%;">
+						<textarea name="secretQuestion" style="width:100%;"	rows="5">
+						</textarea>			
+					</td>
+				</tr>
+				<tr>
+					<td style="width:35%;">
+						<span>Select your colors:</span>
+					</td>
+					<td style="width:100%;">
+						<input type="checkbox" name="colorselection" id="colorselectionblue" 
+							value="Blue" checked /><span>Blue</span>	
+						<input type="checkbox" name="colorselection"
+							value="Yellow" /><span>Yellow</span>	
+						<input type="checkbox" name="colorselection"
+							value="Green" checked /><span>Green</span>	
+						<input type="checkbox" name="colorselection"
+							value="Red" /><span>Red</span>	
+					</td>
+				</tr>
+				<tr>
+					<td style="width:35%;">
+						<span>Remember Me?</span>
+					</td>
+					<td style="width:100%;">
+						<input type="radio" name="rememberMe"
+							value="Yes" checked /><span>Yes</span>	
+						<input type="radio" name="rememberMe"
+							value="No" /><span>No</span>	
+						
+						<!--
+						<input type="radio" name="someotherselection"
+							value="No" /><span>No</span>	
+						-->
+					</td>
+
+				</tr>
+				<tr>
+					<td style="width:35%;">
+						<span>What state are you from?</span>
+					</td>
+					<td style="width:100%;">
+						<select name="stateSelector" style="width:100%;">
+						    <option id="optionNS" value="-1">--PLEASE SELECT ONE--</option>
+							<option id="optionAL" value="AL">Alabama</option>
+							<option id="optionAK" value="AK" selected>Alaska</option>
+							<option id="optionAZ" value="AZ">Arizona</option>
+							<option id="optionOTHER" value="OTHER">OTHER</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" style="width:100%;">
+						<input type="submit" value="Login" name="loginButton"
+							style="width:150px;" />
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+	</body>
+</html>

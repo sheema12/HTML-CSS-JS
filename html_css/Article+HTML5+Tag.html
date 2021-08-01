@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>HomeTown Players Pro Basketball Team</title>
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=mDdx0-fXkHB3sl9iT3f0bvwSeynHqoVD3bAaDkQQBHcIBSCwFw3do_cyvwvXGXFgojbFDpmMWA8Wp6aqzRe1d1P_Hb5zLoNAjq4djXxQJ4i0GouyZU04GyY2LFC8yVdBkO_munHrUllYc_E8fupU6mgzOWBKppMcBujQY50Qimpp9a485j_jcYVt27xJCYB0Z488ZFidWYxZAYqDBIY0MkLq5YUAcJNN0rjpk88bc2BLTbuJ91JgGtVG1Cm30GuT9CVjJ4w7l6wa9VdFXyXVmPqGWCCPRohN3A_P_MzAZGS65f6yC0L_F6WJ0NdseZrsiKVEpzd5esOwWVEdnIEBwVPH7x6AC7-fm2MXKyZ_uenVXce3MOZW4whoRPnzNy8_PLri0drafLiLip62o2H3oRP0SXpIPR33Y6Xgqb8uxp-jAWMuZQQHozd3HQho8CPoOgidEpldMXLbhfXRHlwuxjkU8nkiv41B88pYQNLD8LxzSaO0EznnVEkGEeYIogyOVLRAZtpYerEvd-N-wN91ZqMA-r55-mW1-9JRp_eceFV9LWPp_zHh05Nrxd3ajglYu-jNSgTKIoMaAtaHtaN71OqxWXUmLOpSpK5HMuJyxsZ8MTyoI-86SMx2-lHpeDGYP6yDwPQxPINbQeZCSUXOeQWYkigXZDCj9fCTuya1pEu1qamVJZOBD-GRYFu8q7jCMCTdijaJ8iHW6cXK2zz2Vde3SPtZ6RJPAIyl7gu6EnWDFbMzc_1UJb_TCPuN0btAFAW6kEUxBRT4AeMoHy2du9I_XJL9RnxQ28RXiOWP7jAErXa4QbSWecLaumTdIpItNagJR1z92-iBDkXKKw_Zzg" charset="UTF-8"></script></head>
+
+	<body>
+		<header id="mainHeader">
+			<h2>HomeTown Players Pro Basketball Team</h2>
+		</header>		
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="stats.html" class="selected">Team Stats</a></li>
+				<li><a href="coach.html">Coach</a></li>
+				<li><a href="arena.html">Arena</a></li>
+				<li><a href="tickets.html">Tickets</a></li>
+			</ul>	
+		</nav>
+		<section id="mainContent">
+			<!-- an article should be a section of content
+			     that contains an entire piece of information - 
+			     like an article in the newspaper (i.e. a sports article in the sports section 
+			     or an editorial in the editorial section)
+			     NOTE: Since once again we'll have multiple articles, we should give each an id -->
+			
+			<!-- here we have the players stats -->
+			<article id="playerStatList">
+				<header id="playerStatHeader">
+					<span id="playerStatHeaderDetails">Player Stats For This Season</span>
+				</header>
+				<!-- Player Name |  Shots  | Points | FreeThrows | Rebounds | Steals | Assists -->
+				<table class="playerStatsTable">
+					<tr>
+						<th>Player Name</th>
+						<th>Shots</th>
+						<th>Points</th>
+						<th style="width: 84px">Free Throws</th>
+						<th>Rebounds</th>
+						<th>Steals</th>
+						<th>Assists</th>
+					</tr>
+					<tr>
+						<td>Jason Bourne</td>
+						<td>32</td>
+						<td>18</td>
+						<td style="width: 84px">7/10</td>
+						<td>6</td>
+						<td>2</td>
+						<td>4</td>
+					</tr>
+					<tr class="altRow">
+						<td>Tony Stark</td>
+						<td>24</td>
+						<td>17</td>
+						<td style="width: 84px">6/12</td>
+						<td>5</td>
+						<td>8</td>
+						<td>13</td>
+					</tr>
+					<tr>
+						<td>David Banner</td>
+						<td>32</td>
+						<td>18</td>
+						<td style="width: 84px">7/10</td>
+						<td>6</td>
+						<td>2</td>
+						<td>4</td>
+					</tr>
+					<tr class="altRow">
+						<td>Peter Parker</td>
+						<td>24</td>
+						<td>17</td>
+						<td style="width: 84px">6/12</td>
+						<td>5</td>
+						<td>8</td>
+						<td>13</td>
+					</tr>
+					<tr>
+						<td>Barry Allen</td>
+						<td>32</td>
+						<td>18</td>
+						<td style="width: 84px">7/10</td>
+						<td>6</td>
+						<td>2</td>
+						<td>4</td>
+					</tr>
+					<tr class="altRow">
+						<td>Bruce Wayne</td>
+						<td>24</td>
+						<td>17</td>
+						<td style="width: 84px">6/12</td>
+						<td>5</td>
+						<td>8</td>
+						<td>13</td>
+					</tr>
+				</table>
+			</article>
+			
+			<!-- and here we have the team stats -->
+			<article id="teamStatDetails">
+				<header id="teamStatHeader">
+					<span id="teamStatHeaderDetails">Team Stats For This Season</span>
+				</header>
+				
+				<div id="teamstatstablediv">
+					<table id="teamStatTable" class="asideTable">
+						<tr>
+							<th>Shots</th>
+							<th>Points</th>
+							<th style="width: 84px">Free Throws</th>
+							<th>Rebounds</th>
+							<th>Steals</th>
+							<th>Assists</th>
+						</tr>
+						<tr>
+							<td>1250</td>
+							<td>750</td>
+							<td style="width: 84px">194/227</td>
+							<td>551</td>
+							<td>256</td>
+							<td>754</td>
+						</tr>
+					</table>
+				</div>
+			</article>
+			
+		</section>
+	</body>
+</html>

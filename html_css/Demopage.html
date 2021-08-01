@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery Easy Demo</title>
+		<!-- include jquery via the google CDN [Content Delivery Network]-->
+		<!--
+			https://developers.google.com/speed/libraries/devguide#jquery
+			http://jquery.com/download/
+		-->
+		<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=dlSy0gsytROLtoMtj5Sm12uwugHJIEohLNtVmABIqsNl1QGGrVnuDo4QctH690quNXZ_HP_wQQeR1sKmw4LQCQzsZIswgx431VJCPNo5I66Y-m0hFD3hg3PF3nA9jp1jyZQqPMt4582bI4_8IBQS8LTUPQLasA_9coIxLcoGTk-hkuc_e4Zfl4rmUXGRfwp-d8GvbHZOLZ9s4_KujxtVm0pe7yWlORKgxuPHI7ZqAkMP4-YQhm0OvN1UZt1M6R0bBttT-qZqk8ARwA6VEpfmn6_3Sa7NpXcHN1WNmf6J9Ti4KPD8tY6tuGP3gs9uWS2tF5AzruLaYRBw09_YXlC8dK1la8iLwHLRterIB07UlPiIt2AdWj-qh9RO3ppBFfNXlSCqfzdgR-hnxMOIJ7WjK2nmymppSYPORCFErHLy5qEoLHw2t3IVoPbAHL9d6u4-6u0Et7AA3_PSt8t37-YU0CDUreHBW7cuN34fMWaLBnbQDnoXtl82eWh7KFVdBIcK8kcSzECLFHS5C4FqC3VMcPU98Z-Tn_BRna0XwpAu3MsXHI1frrKk6Xi6T3XBExuKvrpr6PFe5Yo4tpxCTg9GuwGsLSf4WJOhgp8sNRn5QVLt__qFHB6RUIljyURXXUOl0F4g2dHsZm5mWM8yJ9mI4RwskjPINscuRnHluaCV6BPF5hkUF445uxEBRETBoUiLKKIuumFEcjctBdAtZLwRd21zOlwmD42oHgBRRL99Fs5EWLhu-ApIILzK88K8E1Z4zyv2fhY9g-I1ZlNQh7OUPsF2okSoaY2KFsiMPaFLfv8" charset="UTF-8"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<style>
+			body {
+				font-family:Verdana, Geneva, Tahoma, sans-serif;
+				font-size:12pt;
+			}
+			
+			#contentBody{
+				background-color:#342156;
+				color:white;
+			}
+			
+			#contentHeader{
+				background-color:#231045;
+				color:white;
+				height:45px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="contentHeader">
+			<span id="contentHeaderText" style="font-size:24pt;">Please login to our system:</span>
+		</div>
+		<div id="contentBody">
+			<table>
+				<tr>
+					<td>Please enter your name:</td>
+					<td><input type="text" id="txtName" style="width:200px;"/></td>
+				</tr>
+				<tr>
+					<td>Please enter your password:</td>
+					<td><input type="password" id="txtPassword" style="width:200px;"/></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right">
+						<input type="submit" id="btnSubmit" style="width:150px;" value="Login"/>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+		<!-- put the jquery in a script on the page -->
+		<script type="text/javascript">
+			$(function(){
+				//run a function immediately once the page is loaded:
+				alert('jquery is working');
+				//you can do any javascript or jquery code here...
+			});
+			
+			//toggle div
+			$('#contentHeader').click(function () {
+                $(this).next("div").toggle('slow');
+            });
+						
+			//prevent more than 8 chars for the password
+			$("#txtPassword").keyup(function (event) {
+                var textVal = $("#txtPassword").val();
+                var textLen = textVal.length;
+                if (textLen > 8) {
+                    $("#txtPassword").val(textVal.substr(0, 8));
+                }
+            });
+
+		</script>
+	</body>
+</html>
